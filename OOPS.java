@@ -20,13 +20,22 @@ class Student {
         System.out.println(this.age);
 
     }
+
+    //!constructor:construct of object
+    Student() { //non-parameterized constructor
+        System.out.println("constructor called")
+    }
+    //parameterized constructor
+    Student(String name, int age) {
+        this.name = name; //this.object = parameter
+    }
 }
 
 
 // object (instance)
 public class OOPS {
     public static void main(String args[]){
-        Pen pen1 = new Pen();//object making
+        Pen pen1 = new Pen();//object making 
         pen1.color = "blue";// object accessing
         pen1.type = "gel-pen";
 
