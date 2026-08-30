@@ -23,6 +23,12 @@ class Student {
         this.age = age;
     }
 
+// this refers to the object currently being created.
+// this.name is the object's field (instance variable).
+// name (right side, no this.) is the parameter passed into the constructor.
+
+// So this.name = name; means: "take the value from the parameter name and store it into this object's name field."
+
     //3.copy constructor
     Student(Student s2){
         this.name = s2.name;
