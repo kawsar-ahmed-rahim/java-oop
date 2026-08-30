@@ -1,2 +1,10 @@
 class - blueprint
 object -  instance/made from object
+
+$polymorphism
+when we do a work in different ways then it is called polymorphism
+
+polymorphism are two types
+1.function overloading // compile-time
+many functions which do different works but these names are same
+2.function overriding //run-time

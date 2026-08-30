@@ -1,3 +1,4 @@
+//! object-class
 // class(blueprint)
 class Pen {
     String color;// red,black //!property //!data
@@ -19,15 +20,6 @@ class Student {
         System.out.println(this.name);
         System.out.println(this.age);
 
-    }
-
-    //!constructor:construct of object
-    Student() { //non-parameterized constructor
-        System.out.println("constructor called")
-    }
-    //parameterized constructor
-    Student(String name, int age) {
-        this.name = name; //this.object = parameter
     }
 }
 
