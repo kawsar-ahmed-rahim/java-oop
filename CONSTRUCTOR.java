@@ -17,7 +17,7 @@ class Student {
         System.out.println("constructor called");
     }
 
-    //2.parameterized constructor
+    //2.parameterized constructor / constructor overloading
     Student(String name, int age) {
         this.name = name; //this.object = parameter
         this.age = age;
