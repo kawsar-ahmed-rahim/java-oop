@@ -8,3 +8,9 @@ polymorphism are two types
 1.function overloading // compile-time
 many functions which do different works but these names are same
 2.function overriding //run-time
+
+// Inheritence - 4 types
+1.single level inheritence
+2.multi level inheritence
+3.Hierarchial inheritence
+4.hybrid inheritence
