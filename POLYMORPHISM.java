@@ -10,7 +10,7 @@ class Student {
         System.out.println(this.name);
     }
 
-    public void printInfo(String age) {
+    public void printInfo(int age) {
         System.out.println(this.age);
     }
 
