@@ -1,7 +1,8 @@
 class - blueprint
 object -  instance/made from object
 
-$polymorphism
+//$ 
+polymorphism
 when we do a work in different ways then it is called polymorphism
 
 polymorphism are two types
@@ -14,3 +15,23 @@ many functions which do different works but these names are same
 2.multi level inheritence
 3.Hierarchial inheritence
 4.hybrid inheritence
+
+// packages
+1.built in packages
+ex: java.util.* 
+2.user built packages
+
+//access modifier
+1.public-everybody can access. example:(main function)
+2.private(only can access in his own class).example: password
+here we can use two functions: getters, setters
+3.default(in current package everybody can access)
+4.protected(in current package everybody can access and in other folder the subclass can use it)
+
+
+// encapsulation
+data and methods should be combined in a single entity/unit
+
+// abstraction
+important jinish user ke dekhabo
+unimportant jinish user theke hide korbo
