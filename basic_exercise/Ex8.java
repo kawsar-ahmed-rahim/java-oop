@@ -10,9 +10,12 @@ public class Ex8 {
         int b = sc.nextInt();
         int c = sc.nextInt();
         int smallest;
-        if (a <= b && a <= c) smallest = a;
-        else if (b <= a && b <= c) smallest = b;
-        else smallest = c;
+        if (a <= b && a <= c)
+            smallest = a;
+        else if (b <= a && b <= c)
+            smallest = b;
+        else
+            smallest = c;
         System.out.println("Smallest is " + smallest);
     }
 }
