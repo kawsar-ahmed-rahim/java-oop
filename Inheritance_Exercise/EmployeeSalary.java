@@ -20,7 +20,7 @@
  * =================================================
  */
 
-// ANSWER
+
 class Employee {
     protected String name;
     protected int employeeId;

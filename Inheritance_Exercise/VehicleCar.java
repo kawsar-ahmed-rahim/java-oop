@@ -14,7 +14,7 @@
  * =================================================
  */
 
-// ANSWER
+
 class Vehicle {
     protected String brand;
     protected int speed;
@@ -37,11 +37,11 @@ class Car extends Vehicle {
     private int numberOfDoors;
 
     public Car(String brand, int speed, int numberOfDoors) {
-        super(brand, speed);       // superclass constructor initializes brand and speed
+        super(brand, speed);       
         this.numberOfDoors = numberOfDoors;
     }
 
-    // Challenge: call the parent version first, then add the car-specific message
+    
     @Override
     public void startEngine() {
         super.startEngine();

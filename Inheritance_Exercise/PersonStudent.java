@@ -12,12 +12,12 @@
  * =================================================
  */
 
-// ANSWER
+
 class Person {
     protected String name;
     protected int age;
 
-    // Parameterized constructor
+  
     public Person(String name, int age) {
         this.name = name;
         this.age = age;
@@ -33,7 +33,7 @@ class Student extends Person {
     private String studentId;
 
     public Student(String name, int age, String studentId) {
-        super(name, age);          // call the Person constructor
+        super(name, age);          
         this.studentId = studentId;
     }
 

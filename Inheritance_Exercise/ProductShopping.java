@@ -16,7 +16,7 @@
  * =================================================
  */
 
-// ANSWER
+
 class Product {
     protected String productName;
     protected double price;

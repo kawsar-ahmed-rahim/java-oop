@@ -19,7 +19,7 @@
  * =================================================
  */
 
-// ANSWER
+
 class BankAccount {
     protected String accountNumber;
     protected String holderName;

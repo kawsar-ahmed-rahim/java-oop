@@ -18,7 +18,7 @@
  * =================================================
  */
 
-// ANSWER
+
 class Transport {
     protected String vehicleNumber;
     protected double distance;
@@ -34,8 +34,7 @@ class Transport {
         return baseFare;
     }
 
-    // Challenge: displayDetails() calls calculateFare(), so the overridden
-    // version of the actual object's class is used.
+    
     public void displayDetails() {
         System.out.println("Vehicle Number  : " + vehicleNumber);
         System.out.println("Distance        : " + distance + " km");

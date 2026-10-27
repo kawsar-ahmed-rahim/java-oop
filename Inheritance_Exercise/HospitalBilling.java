@@ -21,7 +21,6 @@
  * =================================================
  */
 
-// ANSWER
 class Patient {
     protected int patientId;
     protected String name;
@@ -94,8 +93,7 @@ class OutPatient extends Patient {
 
 public class HospitalBilling {
     public static void main(String[] args) {
-        // Runtime polymorphism: every element is a Patient reference,
-        // but each refers to a different kind of object.
+        
         Patient[] patients = {
             new InPatient(1, "Rahim", 500, 5, 2000),
             new OutPatient(2, "Karim", 300, 1200),

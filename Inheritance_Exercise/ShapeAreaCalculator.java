@@ -15,7 +15,7 @@
  * =================================================
  */
 
-// ANSWER
+
 class Shape {
     protected String color;
 
@@ -77,7 +77,7 @@ class Circle extends Shape {
 
 public class ShapeAreaCalculator {
     public static void main(String[] args) {
-        // Challenge: Rectangle and Circle objects stored in one Shape[] array
+       
         Shape[] shapes = {
             new Rectangle("Red", 5, 3),
             new Circle("Blue", 4),

@@ -20,18 +20,16 @@
  * =================================================
  */
 
-// ANSWER
 class ATMAccount {
     private static final int MAX_FAILED_ATTEMPTS = 3;
 
     private final String accountNumber;
-    private String pin;                  // never exposed: no getPin()
-    private double balance;              // no setter
-    private int failedAttempts;          // no setter
+    private String pin;                  
+    private double balance;             
+    private int failedAttempts;          
     private boolean locked;
 
-    // NOTE: a real bank stores only a salted hash of the PIN. A plain String is kept
-    // here to keep the exercise simple.
+    
     public ATMAccount(String accountNumber, String pin, double balance) {
         if (accountNumber == null || accountNumber.trim().isEmpty()) {
             throw new IllegalArgumentException("Account number must not be empty");

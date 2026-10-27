@@ -16,7 +16,7 @@
  * =================================================
  */
 
-// ANSWER
+
 class Person {
     protected String name;
     protected int age;
@@ -46,7 +46,7 @@ class Student extends Person {
 
     @Override
     public void displayInfo() {
-        super.displayInfo();       // reuse Person's output
+        super.displayInfo();       
         System.out.println("Student ID     : " + studentId);
         System.out.println("Department     : " + department);
     }
@@ -66,7 +66,7 @@ class GraduateStudent extends Student {
 
     @Override
     public void displayInfo() {
-        super.displayInfo();       // reuse Student's (and Person's) output
+        super.displayInfo();       
         System.out.println("Research Topic : " + researchTopic);
         System.out.println("CGPA           : " + cgpa);
     }

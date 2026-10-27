@@ -13,7 +13,7 @@
  * =================================================
  */
 
-// ANSWER
+
 class Animal {
     protected String name;
     protected double weight;
@@ -36,7 +36,7 @@ class Dog extends Animal {
     private String breed;
 
     public Dog(String name, double weight, String breed) {
-        super(name, weight);       // initialize inherited data
+        super(name, weight);       
         this.breed = breed;
     }
 
