@@ -11,14 +11,14 @@ class Triangle extends Shape {// subclass/child class
     }
 }
 
-public class INHERITENCE{
+public class Inheritance{
     public static void main(String args[]){
         Triangle t1 = new Triangle();
         
     }
 }
 
-//! 2.multi level inheritence
+//! 2.multi level inheritance
 class Shape { // base class/ parent class
     public void area(){
         System.out.println("displays area");
@@ -36,7 +36,7 @@ class EquilateralTriangle extends Triangle{
     }
 }
 
-public class INHERITENCE{
+public class Inheritance{
     public static void main(String args[]){
         Triangle t1 = new Triangle();
         
@@ -44,7 +44,7 @@ public class INHERITENCE{
 }
 
 
-//! 3.multi level inheritence
+//! 4.hiercci  inheritence
 class Shape { // base class/ parent class
     public void area(){
         System.out.println("displays area");
@@ -63,11 +63,11 @@ class Circle extends Shape {
     }
 }
 
-public class INHERITENCE{
+public class Inheritance{
     public static void main(String args[]){
         Triangle t1 = new Triangle();
         
     }
 }
 
-//! 4.hybrid inheritence
+//! 5.hybrid inheritence
