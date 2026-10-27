@@ -87,8 +87,8 @@ public class ShapeAreaCalculator {
 
         double totalArea = 0;
         for (Shape shape : shapes) {
-            shape.displayInfo();                 // overridden version runs
-            totalArea += shape.calculateArea();  // area calculated in a loop
+            shape.displayInfo();                
+            totalArea += shape.calculateArea();  
         }
 
         System.out.printf("Total area of all shapes: %.2f%n", totalArea);

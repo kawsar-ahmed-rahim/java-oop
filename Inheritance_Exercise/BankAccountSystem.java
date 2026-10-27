@@ -37,7 +37,7 @@ class BankAccount {
 }
 
 class SavingsAccount extends BankAccount {
-    private double interestRate;   // percentage, e.g. 5 means 5%
+    private double interestRate;  
 
     public SavingsAccount(String accountNumber, String holderName,
                           double balance, double interestRate) {

@@ -107,7 +107,6 @@ public class HospitalBilling {
             System.out.println();
         }
 
-        // Challenge: which overridden method runs for a parent reference?
         System.out.println("--- Which calculateBill() ran? ---");
         for (Patient p : patients) {
             System.out.println("Reference type: Patient | Actual object: "

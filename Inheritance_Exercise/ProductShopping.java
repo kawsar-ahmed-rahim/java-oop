@@ -44,7 +44,6 @@ class Electronics extends Product {
         this.warrantyYears = warrantyYears;
     }
 
-    // 10% service charge is added to the price
     @Override
     public double getFinalPrice() {
         return price + price * 0.10;
@@ -66,7 +65,6 @@ class Clothing extends Product {
         this.discountPercentage = discountPercentage;
     }
 
-    // the given discount is subtracted from the price
     @Override
     public double getFinalPrice() {
         return price - (price * discountPercentage / 100);
@@ -81,7 +79,6 @@ class Clothing extends Product {
 
 public class ProductShopping {
     public static void main(String[] args) {
-        // Challenge: one array of type Product holding both kinds of objects
         Product[] products = {
             new Electronics("Laptop", 80000, 2),
             new Electronics("Smartphone", 30000, 1),

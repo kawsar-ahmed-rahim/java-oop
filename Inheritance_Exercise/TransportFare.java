@@ -101,7 +101,6 @@ public class TransportFare {
             new Train("TRN-9", 150, 80)
         };
 
-        // A loop displays the details (and the calculated fare) of each object
         for (Transport t : transports) {
             t.displayDetails();
             System.out.println();
