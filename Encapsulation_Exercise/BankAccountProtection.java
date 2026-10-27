@@ -15,11 +15,10 @@
  * =================================================
  */
 
-// ANSWER
 class BankAccount {
-    private final String accountNumber;   // read-only
+    private final String accountNumber;   
     private String accountHolder;
-    private double balance;               // changed only by deposit() / withdraw()
+    private double balance;               
 
     public BankAccount(String accountNumber, String accountHolder, double balance) {
         if (accountNumber == null || accountNumber.trim().isEmpty()) {
@@ -48,7 +47,6 @@ class BankAccount {
         return balance;
     }
 
-    // No setAccountNumber() and no setBalance() on purpose.
 
     public void setAccountHolder(String accountHolder) {
         if (accountHolder == null || accountHolder.trim().isEmpty()) {
@@ -98,7 +96,6 @@ public class BankAccountProtection {
         account.setAccountHolder("Rahim Uddin");
         System.out.println("Account holder: " + account.getAccountHolder());
 
-        // account.balance = 1000000;        // compile error: balance is private
-        // account.setBalance(1000000);      // compile error: no such method
+        
     }
 }

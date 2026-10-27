@@ -22,12 +22,11 @@
  * =================================================
  */
 
-// ANSWER
 class Course {
-    private final String courseCode;      // cannot be changed after initialization
+    private final String courseCode;     
     private String courseTitle;
-    private int credit;                   // 1 - 4
-    private int enrolledStudents;         // changed only by enroll/drop
+    private int credit;                  
+    private int enrolledStudents;         
     private int maximumCapacity;
 
     public Course(String courseCode, String courseTitle, int credit,
@@ -75,7 +74,6 @@ class Course {
         return maximumCapacity;
     }
 
-    // Only courseTitle, credit and maximumCapacity may be modified directly.
 
     public void setCourseTitle(String courseTitle) {
         if (courseTitle == null || courseTitle.trim().isEmpty()) {
@@ -141,15 +139,15 @@ public class CourseRegistration {
         course.setCredit(4);
         course.setCourseTitle("");
         course.setCourseTitle("Introduction to Programming");
-        course.setMaximumCapacity(1);     // rejected: 2 students are enrolled
-        course.setMaximumCapacity(0);     // rejected: must be greater than zero
-        course.setMaximumCapacity(2);     // accepted: equals the enrolled count
+        course.setMaximumCapacity(1);     
+        course.setMaximumCapacity(0);     
+        course.setMaximumCapacity(2);     
 
         System.out.println();
-        course.enrollStudent();           // rejected: course is full
+        course.enrollStudent();          
         course.dropStudent();
         course.dropStudent();
-        course.dropStudent();             // rejected: nobody is enrolled
+        course.dropStudent();             
 
         System.out.println();
         System.out.println(course.getCourseTitle() + " | credits: " + course.getCredit()

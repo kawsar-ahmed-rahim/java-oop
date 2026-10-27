@@ -16,13 +16,13 @@
  * =================================================
  */
 
-// ANSWER
+
 class LibraryBook {
     private final int bookId;
     private String title;
     private String author;
     private final int totalCopies;
-    private int availableCopies;     // always between 0 and totalCopies
+    private int availableCopies;     
 
     public LibraryBook(int bookId, String title, String author,
                        int totalCopies, int availableCopies) {
@@ -114,12 +114,11 @@ public class LibraryBorrowing {
         System.out.println();
         book.borrowBook();
         book.borrowBook();
-        book.borrowBook();     // rejected: none left
-
+        book.borrowBook();    
         System.out.println();
         book.returnBook();
         book.returnBook();
-        book.returnBook();     // rejected: would exceed total copies
+        book.returnBook();     
 
         System.out.println();
         book.setTitle("");

@@ -21,11 +21,10 @@
  * =================================================
  */
 
-// ANSWER
 class ElectricityAccount {
-    private final String meterNumber;      // read-only
+    private final String meterNumber;     
     private String customerName;
-    private double previousReading;        // no public setter
+    private double previousReading;       
     private double currentReading;
 
     public ElectricityAccount(String meterNumber, String customerName,
@@ -73,7 +72,6 @@ class ElectricityAccount {
         }
     }
 
-    // The negated comparison also rejects NaN, which would otherwise slip through.
     public void setCurrentReading(double reading) {
         if (!(reading >= previousReading)) {
             System.out.println("Error: reading " + reading + " is lower than the previous "
@@ -83,7 +81,6 @@ class ElectricityAccount {
         }
     }
 
-    // First 100 units: 5 each, next 100 units: 7 each, above 200 units: 10 each
     public double calculateBill() {
         double units = currentReading - previousReading;
         if (units <= 0) {
@@ -97,7 +94,7 @@ class ElectricityAccount {
         } else {
             bill = 100 * 5 + 100 * 7 + (units - 200) * 10;
         }
-        return Math.max(0.0, bill);        // the bill can never be negative
+        return Math.max(0.0, bill);       
     }
 
     public void startNewBillingCycle() {
@@ -119,19 +116,18 @@ public class ElectricityBilling {
 
         System.out.println();
         System.out.println("Invalid input attempts:");
-        acc.setCurrentReading(900);                 // lower than the previous reading
-        acc.setCurrentReading(Double.NaN);          // not a number
+        acc.setCurrentReading(900);               
+        acc.setCurrentReading(Double.NaN);          
         acc.setCustomerName("  ");
         System.out.println("Bill is still: " + acc.calculateBill());
 
         System.out.println();
         System.out.println("Next billing cycle:");
         acc.startNewBillingCycle();
-        acc.setCurrentReading(1320);                // 70 units, all in the first slab
+        acc.setCurrentReading(1320);                
         System.out.println("Units: " + (acc.getCurrentReading() - acc.getPreviousReading())
                 + " -> bill: " + acc.calculateBill());
 
-        // acc.previousReading = 0;     // compile error: private
-        // acc.setMeterNumber("X");     // compile error: no such method
+    
     }
 }

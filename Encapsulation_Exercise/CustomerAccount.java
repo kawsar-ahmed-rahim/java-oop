@@ -17,13 +17,12 @@
  * =================================================
  */
 
-// ANSWER
 class Customer {
-    private final String customerId;   // no setter
+    private final String customerId; 
     private String name;
     private String email;
     private String phoneNumber;
-    private double walletBalance;      // no setter, changed only by addMoney/makePayment
+    private double walletBalance;      
 
     public Customer(String customerId, String name, String email,
                     String phoneNumber, double walletBalance) {
@@ -53,7 +52,6 @@ class Customer {
         return name != null && !name.trim().isEmpty();
     }
 
-    // must contain exactly one @ and a '.' somewhere after it (not the last character)
     private static boolean isValidEmail(String email) {
         if (email == null) {
             return false;
@@ -84,7 +82,6 @@ class Customer {
         return phoneNumber;
     }
 
-    // Returns a copy of a primitive value, so callers can read but never modify it.
     public double getWalletBalance() {
         return walletBalance;
     }
@@ -146,10 +143,10 @@ public class CustomerAccount {
         System.out.println();
         System.out.println("Invalid setter inputs (data must stay unchanged):");
         c.setName("   ");
-        c.setEmail("rahim.example.com");     // no @
-        c.setEmail("rahim@examplecom");      // no . after @
-        c.setPhoneNumber("0171234");         // too short
-        c.setPhoneNumber("0171234567a");     // not all digits
+        c.setEmail("rahim.example.com");    
+        c.setEmail("rahim@examplecom");      
+        c.setPhoneNumber("0171234");         
+        c.setPhoneNumber("0171234567a");   
         System.out.println(c.getName() + " | " + c.getEmail() + " | " + c.getPhoneNumber());
 
         System.out.println();
@@ -167,8 +164,6 @@ public class CustomerAccount {
         c.makePayment(5000);
         System.out.println("Final wallet balance: " + c.getWalletBalance());
 
-        // Challenge: outside code cannot modify the wallet directly.
-        // c.walletBalance = 1000000;     // compile error: walletBalance is private
-        // c.setWalletBalance(1000000);   // compile error: no such method
+        
     }
 }

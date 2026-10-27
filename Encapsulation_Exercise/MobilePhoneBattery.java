@@ -17,11 +17,10 @@
  * =================================================
  */
 
-// ANSWER
 class MobilePhone {
     private String brand;
     private String model;
-    private int batteryPercentage;   // always kept between 0 and 100
+    private int batteryPercentage; 
     private boolean isPoweredOn;
 
     public MobilePhone(String brand, String model, int batteryPercentage,
@@ -54,7 +53,6 @@ class MobilePhone {
         return isPoweredOn;
     }
 
-    // No setBatteryPercentage(): the level changes only by charging or using the phone.
 
     public void chargeBattery(int amount) {
         if (amount <= 0) {
@@ -108,14 +106,14 @@ public class MobilePhoneBattery {
 
         System.out.println();
         phone.powerOn();
-        phone.useBattery(20);      // would go below 0, stops at 0 and shuts down
-        phone.powerOn();           // rejected: battery is 0%
+        phone.useBattery(20);      
+        phone.powerOn();         
 
         System.out.println();
         phone.chargeBattery(50);
         phone.powerOn();
-        phone.chargeBattery(80);   // would exceed 100, stops at 100
-        phone.chargeBattery(-5);   // rejected
+        phone.chargeBattery(80);   
+        phone.chargeBattery(-5);   
 
         System.out.println();
         phone.powerOff();

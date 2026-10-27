@@ -16,9 +16,8 @@
  * =================================================
  */
 
-// ANSWER
 class Employee {
-    private final int employeeId;   // final: cannot change after the object is created
+    private final int employeeId;   
     private String name;
     private double salary;
 
@@ -46,7 +45,6 @@ class Employee {
         return salary;
     }
 
-    // Deliberately no setEmployeeId(): the ID is read-only.
 
     public void setName(String name) {
         if (name == null || name.trim().isEmpty()) {
@@ -64,7 +62,6 @@ class Employee {
         }
     }
 
-    // percentage must be greater than 0 and at most 100
     public void increaseSalary(double percentage) {
         if (percentage <= 0 || percentage > 100) {
             System.out.println("Error: percentage must be greater than 0 and at most 100.");
@@ -91,9 +88,7 @@ public class EmployeeSalaryValidation {
         System.out.println("ID: " + emp.getEmployeeId() + ", Name: " + emp.getName()
                 + ", Salary: " + emp.getSalary());
 
-        // Challenge: the employee ID cannot be changed after creation.
-        // emp.setEmployeeId(999);    // compile error: no such method
-        // emp.employeeId = 999;      // compile error: private and final
+       
         System.out.println();
         System.out.println("Employee ID is still: " + emp.getEmployeeId());
     }

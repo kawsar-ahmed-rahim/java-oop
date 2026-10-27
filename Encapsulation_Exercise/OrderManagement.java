@@ -21,18 +21,17 @@
  * =================================================
  */
 
-// ANSWER
 class Order {
-    // Only these four statuses can ever exist
+    
     private enum Status { PLACED, SHIPPED, DELIVERED, CANCELLED }
 
-    private final String orderId;      // read-only
+    private final String orderId;      
     private String customerName;
     private final double totalAmount;
-    private Status status;             // changed only by ship/deliver/cancel
+    private Status status;             
     private double discountPercentage;
 
-    // A new order always starts as PLACED
+
     public Order(String orderId, String customerName, double totalAmount,
                  double discountPercentage) {
         if (orderId == null || orderId.trim().isEmpty()) {
@@ -90,7 +89,7 @@ class Order {
         }
     }
 
-    // PLACED -> SHIPPED only
+    
     public void shipOrder() {
         if (status == Status.PLACED) {
             status = Status.SHIPPED;
@@ -100,7 +99,6 @@ class Order {
         }
     }
 
-    // SHIPPED -> DELIVERED only (so PLACED can never jump straight to DELIVERED)
     public void deliverOrder() {
         if (status == Status.SHIPPED) {
             status = Status.DELIVERED;
@@ -110,7 +108,6 @@ class Order {
         }
     }
 
-    // PLACED -> CANCELLED only (a shipped order cannot be cancelled)
     public void cancelOrder() {
         if (status == Status.PLACED) {
             status = Status.CANCELLED;
@@ -135,7 +132,7 @@ public class OrderManagement {
 
         System.out.println();
         System.out.println("Challenge - PLACED cannot jump to DELIVERED:");
-        order.deliverOrder();                 // rejected
+        order.deliverOrder();              
         System.out.println("Status: " + order.getStatus());
 
         System.out.println();

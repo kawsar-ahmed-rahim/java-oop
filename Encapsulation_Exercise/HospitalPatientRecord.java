@@ -21,16 +21,15 @@
 import java.util.Arrays;
 import java.util.List;
 
-// ANSWER
 class Patient {
     private static final List<String> VALID_BLOOD_GROUPS =
             Arrays.asList("A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-");
 
-    private final int patientId;       // no setter
+    private final int patientId;      
     private String patientName;
     private int age;
     private String bloodGroup;
-    private double medicalBill;        // changed only via addMedicalCharge/makePayment
+    private double medicalBill;        
 
     public Patient(int patientId, String patientName, int age,
                    String bloodGroup, double medicalBill) {
@@ -153,9 +152,8 @@ public class HospitalPatientRecord {
         p.addMedicalCharge(1500);
         p.addMedicalCharge(-100);
         p.makePayment(1000);
-        p.makePayment(9999);      // overpayment rejected
-        p.makePayment(2500);      // pays the remaining bill exactly
-
+        p.makePayment(9999);     
+        p.makePayment(2500);      
         System.out.println();
         System.out.println("ID " + p.getPatientId() + " | " + p.getPatientName()
                 + " | age " + p.getAge() + " | " + p.getBloodGroup()
