@@ -13,30 +13,29 @@
  * =================================================
  */
 
-
 class Animal {
-    protected String name;
-    protected double weight;
+    String name;
+    double weight;
 
-    public Animal(String name, double weight) {
+    Animal(String name, double weight) {
         this.name = name;
         this.weight = weight;
     }
 
-    public void makeSound() {
+    void makeSound() {
         System.out.println("Animal makes a sound");
     }
 
-    public void displayInfo() {
+    void displayInfo() {
         System.out.println("Name: " + name + ", Weight: " + weight + " kg");
     }
 }
 
 class Dog extends Animal {
-    private String breed;
+    String breed;
 
-    public Dog(String name, double weight, String breed) {
-        super(name, weight);       
+    Dog(String name, double weight, String breed) {
+        super(name, weight);
         this.breed = breed;
     }
 
@@ -61,7 +60,6 @@ public class AnimalDog {
         dog1.displayInfo();
         dog1.makeSound();
 
-        System.out.println();
         System.out.println("--- Dog 2 ---");
         dog2.displayInfo();
         dog2.makeSound();

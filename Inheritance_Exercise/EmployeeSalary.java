@@ -20,23 +20,22 @@
  * =================================================
  */
 
-
 class Employee {
-    protected String name;
-    protected int employeeId;
-    protected double basicSalary;
+    String name;
+    int employeeId;
+    double basicSalary;
 
-    public Employee(String name, int employeeId, double basicSalary) {
+    Employee(String name, int employeeId, double basicSalary) {
         this.name = name;
         this.employeeId = employeeId;
         this.basicSalary = basicSalary;
     }
 
-    public double calculateSalary() {
+    double calculateSalary() {
         return basicSalary;
     }
 
-    public void displayDetails() {
+    void displayDetails() {
         System.out.println("Name         : " + name);
         System.out.println("ID           : " + employeeId);
         System.out.printf("Basic Salary : %,.2f%n", basicSalary);
@@ -45,20 +44,20 @@ class Employee {
 }
 
 class Manager extends Employee {
-    private double bonus;
+    double bonus;
 
-    public Manager(String name, int employeeId, double basicSalary, double bonus) {
+    Manager(String name, int employeeId, double basicSalary, double bonus) {
         super(name, employeeId, basicSalary);
         this.bonus = bonus;
     }
 
     @Override
-    public double calculateSalary() {
+    double calculateSalary() {
         return basicSalary + bonus;
     }
 
     @Override
-    public void displayDetails() {
+    void displayDetails() {
         System.out.println("Name         : " + name);
         System.out.println("ID           : " + employeeId);
         System.out.printf("Basic Salary : %,.2f%n", basicSalary);

@@ -14,42 +14,40 @@
  * =================================================
  */
 
-
 class Vehicle {
-    protected String brand;
-    protected int speed;
+    String brand;
+    int speed;
 
-    public Vehicle(String brand, int speed) {
+    Vehicle(String brand, int speed) {
         this.brand = brand;
         this.speed = speed;
     }
 
-    public void startEngine() {
+    void startEngine() {
         System.out.println("Vehicle engine starting");
     }
 
-    public void displayInfo() {
+    void displayInfo() {
         System.out.println("Brand: " + brand + ", Speed: " + speed + " km/h");
     }
 }
 
 class Car extends Vehicle {
-    private int numberOfDoors;
+    int numberOfDoors;
 
-    public Car(String brand, int speed, int numberOfDoors) {
-        super(brand, speed);       
+     Car(String brand, int speed, int numberOfDoors) {
+        super(brand, speed);
         this.numberOfDoors = numberOfDoors;
     }
 
-    
     @Override
-    public void startEngine() {
+    void startEngine() {
         super.startEngine();
         System.out.println("Car engine starting with key");
     }
 
     @Override
-    public void displayInfo() {
+     void displayInfo() {
         super.displayInfo();
         System.out.println("Number of doors: " + numberOfDoors);
     }

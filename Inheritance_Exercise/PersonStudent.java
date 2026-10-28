@@ -12,33 +12,31 @@
  * =================================================
  */
 
-
 class Person {
-    protected String name;
-    protected int age;
+    String name;
+    int age;
 
-  
-    public Person(String name, int age) {
+    Person(String name, int age) {
         this.name = name;
         this.age = age;
     }
 
-    public void displayInfo() {
+    void displayInfo() {
         System.out.println("Name: " + name);
         System.out.println("Age: " + age);
     }
 }
 
 class Student extends Person {
-    private String studentId;
+    String studentId;
 
-    public Student(String name, int age, String studentId) {
-        super(name, age);          
+    Student(String name, int age, String studentId) {
+        super(name, age);
         this.studentId = studentId;
     }
 
     @Override
-    public void displayInfo() {
+    void displayInfo() {
         System.out.println("Name      : " + name);
         System.out.println("Age       : " + age);
         System.out.println("Student ID: " + studentId);
@@ -53,7 +51,6 @@ public class PersonStudent {
         System.out.println("--- Student 1 ---");
         s1.displayInfo();
 
-        System.out.println();
         System.out.println("--- Student 2 ---");
         s2.displayInfo();
     }
