@@ -52,8 +52,7 @@ class ATMAccount {
             System.out.println("Incorrect PIN");
         }
     }
-
-    public static void main(String[] args) {
+        public static void main(String[] args) {
         ATMAccount account = new ATMAccount("Rahim", 1234, 5000.0);
         account.deposit(1000);
         account.withdraw(2000, 1234);

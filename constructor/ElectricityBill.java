@@ -16,23 +16,19 @@ class ElectricityBill {
     String customerName;
     int units;
 
-    // Constructor
     ElectricityBill(String customerName, int units) {
         this.customerName = customerName;
         this.units = units;
     }
 
-    // Calculate bill
     double calculateBill() {
         double bill;
 
         if (units <= 100) {
             bill = units * 5;
-        } 
-        else if (units <= 200) {
+        } else if (units <= 200) {
             bill = (100 * 5) + ((units - 100) * 7);
-        } 
-        else {
+        } else {
             bill = (100 * 5) + (100 * 7) + ((units - 200) * 10);
         }
 

@@ -53,4 +53,3 @@ public class BookMain {
         System.out.println("Is expensive? " + book.isExpensive());
     }
 }
-

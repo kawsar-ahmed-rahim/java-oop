@@ -11,9 +11,7 @@
 // void returnBook()
 // void displayStatus()
 // Rules:
-// •
 // A borrowed book cannot be borrowed again.
-// •
 // A returned book cannot be returned again.
 
 class LibraryBook {

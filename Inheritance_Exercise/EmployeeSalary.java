@@ -73,7 +73,6 @@ public class EmployeeSalary {
 
         System.out.println("--- Employee ---");
         employee.displayDetails();
-        System.out.println();
         System.out.println("--- Manager ---");
         manager.displayDetails();
 

@@ -17,9 +17,9 @@
 
 
 class Shape {
-    protected String color;
+     String color;
 
-    public Shape(String color) {
+     Shape(String color) {
         this.color = color;
     }
 
@@ -34,8 +34,8 @@ class Shape {
 }
 
 class Rectangle extends Shape {
-    private double length;
-    private double width;
+     double length;
+     double width;
 
     public Rectangle(String color, double length, double width) {
         super(color);
@@ -56,7 +56,7 @@ class Rectangle extends Shape {
 }
 
 class Circle extends Shape {
-    private double radius;
+     double radius;
 
     public Circle(String color, double radius) {
         super(color);

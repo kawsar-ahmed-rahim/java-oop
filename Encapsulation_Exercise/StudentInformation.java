@@ -17,13 +17,11 @@
  * =================================================
  */
 
-// ANSWER
 class Student {
     private String name;
     private int age;
     private double cgpa;
 
-    // Constructor: rejects invalid data so an invalid object is never created
     public Student(String name, int age, double cgpa) {
         if (!isValidName(name)) {
             throw new IllegalArgumentException("Name must not be null, empty or blank");

@@ -46,12 +46,10 @@ class Account {
         System.out.println("Holder Name: " + holderName);
         System.out.println("Balance: " + balance);
     }
-
     public static void main(String[] args) {
         Account acc = new Account("AC1001", "Rahim", 1000.0);
         acc.deposit(500);
         acc.withdraw(2000);
-        acc.withdraw(700);
         acc.displayAccount();
     }
 }

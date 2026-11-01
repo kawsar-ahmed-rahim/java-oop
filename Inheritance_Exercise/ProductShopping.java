@@ -18,8 +18,8 @@
 
 
 class Product {
-    protected String productName;
-    protected double price;
+     String productName;
+     double price;
 
     public Product(String productName, double price) {
         this.productName = productName;
@@ -37,7 +37,7 @@ class Product {
 }
 
 class Electronics extends Product {
-    private int warrantyYears;
+     int warrantyYears;
 
     public Electronics(String productName, double price, int warrantyYears) {
         super(productName, price);
@@ -58,7 +58,7 @@ class Electronics extends Product {
 }
 
 class Clothing extends Product {
-    private double discountPercentage;
+     double discountPercentage;
 
     public Clothing(String productName, double price, double discountPercentage) {
         super(productName, price);

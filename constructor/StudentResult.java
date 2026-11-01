@@ -25,7 +25,6 @@ class StudentResult {
     double marks2;
     double marks3;
 
-    // Constructor
     StudentResult(String name, double marks1, double marks2, double marks3) {
         this.name = name;
         this.marks1 = marks1;
@@ -33,31 +32,24 @@ class StudentResult {
         this.marks3 = marks3;
     }
 
-    // Calculate average
     double calculateAverage() {
         return (marks1 + marks2 + marks3) / 3;
     }
 
-    // Get grade
     String getGrade() {
         double average = calculateAverage();
 
         if (average >= 80) {
             return "A+";
-        } 
-        else if (average >= 70) {
+        } else if (average >= 70) {
             return "A";
-        } 
-        else if (average >= 60) {
+        } else if (average >= 60) {
             return "A-";
-        } 
-        else if (average >= 50) {
+        } else if (average >= 50) {
             return "B";
-        } 
-        else if (average >= 40) {
+        } else if (average >= 40) {
             return "C";
-        } 
-        else {
+        } else {
             return "F";
         }
     }

@@ -7,16 +7,17 @@
 // double getArea()
 // double getCircumference()
 // void displayResult() {
-    
+
 // }
 
-class Circle{
-	double radius;
+class Circle {
+    double radius;
 
-	Circle(double radius){
-	this.radius = radius;
-}
-double getArea() {
+    Circle(double radius) {
+        this.radius = radius;
+    }
+
+    double getArea() {
         return Math.PI * radius * radius;
     }
 
@@ -30,15 +31,11 @@ double getArea() {
         System.out.println("Circumference: " + getCircumference());
     }
 
-}
-
-public class CircletMain {
     public static void main(String[] args) {
-        
-        Circle c1 = new Circle(50.02);
-	
-	c1.displayResult();
 
-        
+        Circle c1 = new Circle(50.02);
+
+        c1.displayResult();
+
     }
 }

@@ -20,9 +20,9 @@
 
 
 class Transport {
-    protected String vehicleNumber;
-    protected double distance;
-    protected double baseFare;
+     String vehicleNumber;
+     double distance;
+     double baseFare;
 
     public Transport(String vehicleNumber, double distance, double baseFare) {
         this.vehicleNumber = vehicleNumber;
@@ -54,7 +54,7 @@ class Bus extends Transport {
 
     @Override
     public void displayDetails() {
-        System.out.println("Type            : Bus");
+        System.out.println("Type: Bus");
         super.displayDetails();
     }
 }
@@ -71,7 +71,7 @@ class Taxi extends Transport {
 
     @Override
     public void displayDetails() {
-        System.out.println("Type            : Taxi");
+        System.out.println("Type: Taxi");
         super.displayDetails();
     }
 }
@@ -88,7 +88,7 @@ class Train extends Transport {
 
     @Override
     public void displayDetails() {
-        System.out.println("Type            : Train");
+        System.out.println("Type: Train");
         super.displayDetails();
     }
 }

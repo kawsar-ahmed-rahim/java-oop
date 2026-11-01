@@ -11,11 +11,8 @@
 // void charge(int amount)
 // void useBattery(int amount)
 // Rules:
-// •
 // Battery cannot exceed 100.
-// •
 // Battery cannot go below 0.
-
 
 class Mobile {
     String brand;
@@ -23,7 +20,6 @@ class Mobile {
     double price;
     int batteryLevel;
 
-    
     Mobile(String brand, String model, double price, int batteryLevel) {
         this.brand = brand;
         this.model = model;
@@ -73,4 +69,3 @@ public class MobilePhone {
         mobile.displayMobile();
     }
 }
-

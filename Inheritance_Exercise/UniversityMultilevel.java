@@ -16,10 +16,9 @@
  * =================================================
  */
 
-
 class Person {
-    protected String name;
-    protected int age;
+    String name;
+    int age;
 
     public Person(String name, int age) {
         this.name = name;
@@ -34,8 +33,8 @@ class Person {
 }
 
 class Student extends Person {
-    protected String studentId;
-    protected String department;
+    String studentId;
+    String department;
 
     public Student(String name, int age, String studentId, String department) {
         super(name, age);
@@ -46,18 +45,18 @@ class Student extends Person {
 
     @Override
     public void displayInfo() {
-        super.displayInfo();       
+        super.displayInfo();
         System.out.println("Student ID     : " + studentId);
         System.out.println("Department     : " + department);
     }
 }
 
 class GraduateStudent extends Student {
-    private String researchTopic;
-    private double cgpa;
+    String researchTopic;
+    double cgpa;
 
     public GraduateStudent(String name, int age, String studentId, String department,
-                           String researchTopic, double cgpa) {
+            String researchTopic, double cgpa) {
         super(name, age, studentId, department);
         this.researchTopic = researchTopic;
         this.cgpa = cgpa;
@@ -66,7 +65,7 @@ class GraduateStudent extends Student {
 
     @Override
     public void displayInfo() {
-        super.displayInfo();       
+        super.displayInfo();
         System.out.println("Research Topic : " + researchTopic);
         System.out.println("CGPA           : " + cgpa);
     }
