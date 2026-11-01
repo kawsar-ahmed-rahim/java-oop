@@ -13,11 +13,8 @@
 // void discount(double percentage, double extraDiscount)
 // void discount(int fixedAmount)
 // Requirements:
-// •
 // First method applies percentage discount.
-// •
 // Second method applies percentage + extra discount.
-// •
 // Third method deducts a fixed amount.
 
 class Book {

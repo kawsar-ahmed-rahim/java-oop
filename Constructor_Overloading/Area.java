@@ -12,11 +12,8 @@
 // double calculate(int length, int width)
 // double calculate(double radius)
 // Calculate:
-// •
 // Square area
-// •
 // Rectangle area
-// •
 // Circle area
 
 class Area {

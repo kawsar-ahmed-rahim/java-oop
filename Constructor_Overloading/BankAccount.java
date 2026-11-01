@@ -58,8 +58,7 @@ class BankAccount {
         System.out.println("Description: " + description);
         System.out.println("Transaction ID: " + transactionId);
         System.out.println("New Balance: " + balance);
-    }}
-    public class EmployeeSalary{
+    }
 
     public static void main(String[] args) {
 
@@ -69,7 +68,6 @@ class BankAccount {
 
         BankAccount a3 = new BankAccount("Hasan", "AC1003", 10000);
 
-
         System.out.println("========== Account 1 ==========");
         System.out.println("Constructor: BankAccount(String accountName)");
         System.out.println("Account Name: " + a1.accountName);
@@ -78,7 +76,6 @@ class BankAccount {
 
         System.out.println("\n--- deposit(double amount) ---");
         a1.deposit(2000);
-
 
         System.out.println("\n========== Account 2 ==========");
         System.out.println("Constructor: BankAccount(String accountName, String accountNumber)");
@@ -91,7 +88,6 @@ class BankAccount {
 
         System.out.println("\n--- deposit(double amount, String description) ---");
         a2.deposit(2000, "Salary");
-
 
         System.out.println("\n========== Account 3 ==========");
         System.out.println("Constructor: BankAccount(String accountName, String accountNumber, double balance)");
