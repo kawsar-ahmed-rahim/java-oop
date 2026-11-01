@@ -16,14 +16,12 @@ class Student {
     int rollNumber;
     int[] marks;
 
-    // Constructor
     Student(String name, int rollNumber, int[] marks) {
         this.name = name;
         this.rollNumber = rollNumber;
         this.marks = marks;
     }
 
-    // Calculate average
     double calculateAverage() {
         int sum = 0;
 
@@ -34,7 +32,6 @@ class Student {
         return sum / (double) marks.length;
     }
 
-    // Calculate grade
     char calculateGrade() {
         double avg = calculateAverage();
 

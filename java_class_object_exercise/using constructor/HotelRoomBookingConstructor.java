@@ -8,7 +8,6 @@
 // 
 // In main, create multiple rooms, book them, and display bills.
 
-// use constructor
 
 class Room {
     int roomNumber;

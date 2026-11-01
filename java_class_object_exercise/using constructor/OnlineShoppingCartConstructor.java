@@ -6,7 +6,6 @@
 // 
 // In main, create an array of 3 products, calculate each product’s total price, and sum all for the cart total.
 
-// use constructor
 
 class Product {
     String name;

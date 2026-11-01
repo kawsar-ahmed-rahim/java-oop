@@ -11,9 +11,9 @@ class LibraryMember {
     String membershipType;
     int booksBorrowed;
 
-    LibraryMember( String memberName,
-    String membershipType,
-    int booksBorrowed){
+    LibraryMember(String memberName,
+            String membershipType,
+            int booksBorrowed) {
         this.memberName = memberName;
         this.membershipType = membershipType;
         this.booksBorrowed = booksBorrowed;
@@ -37,12 +37,12 @@ class LibraryMember {
 public class LibraryMemberMainConstructor {
     public static void main(String[] args) {
         LibraryMember member = new LibraryMember("Rahim", "Premium", 0);
-     
 
         member.borrowBook();
         member.borrowBook();
         member.returnBook();
 
-        System.out.println("Final status for " + member.memberName + " (" + member.membershipType + "): " + member.booksBorrowed + " books borrowed");
+        System.out.println("Final status for " + member.memberName + " (" + member.membershipType + "): "
+                + member.booksBorrowed + " books borrowed");
     }
 }

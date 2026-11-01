@@ -40,9 +40,9 @@ public class BookIssueSystemConstructor {
     public static void main(String[] args) {
         Book book = new Book("Effective Java", "Joshua Bloch");
 
-        book.issueBook();  // issues successfully
-        book.issueBook();  // already issued
-        book.returnBook(); // returned
-        book.issueBook();  // issued again
+        book.issueBook();
+        book.issueBook();
+        book.returnBook();
+        book.issueBook();
     }
 }

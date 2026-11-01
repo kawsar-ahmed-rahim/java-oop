@@ -8,9 +8,10 @@ class CartItem {
     String itemName;
     double unitPrice;
     int quantity;
-    CartItem( String itemName,
-    double unitPrice,
-    int quantity) {
+
+    CartItem(String itemName,
+            double unitPrice,
+            int quantity) {
         this.itemName = itemName;
         this.unitPrice = unitPrice;
         this.quantity = quantity;

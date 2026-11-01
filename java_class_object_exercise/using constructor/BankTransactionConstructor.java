@@ -49,7 +49,7 @@ public class BankTransactionConstructor {
 
         account.deposit(2000);
         account.withdraw(1500);
-        account.withdraw(50000); 
+        account.withdraw(50000);
         account.deposit(500);
 
         account.showHistory();

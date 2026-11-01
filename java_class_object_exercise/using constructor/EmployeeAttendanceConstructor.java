@@ -8,7 +8,6 @@
 
 // In main, create two employees, update attendance for a month, and display percentage.
 
-//use constructor
 class Employee {
     String name;
     int id;
