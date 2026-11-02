@@ -138,7 +138,7 @@ public class OrderManagement {
         System.out.println();
         System.out.println("Normal flow:");
         order.shipOrder();
-        order.cancelOrder();                  // rejected: already shipped
+        order.cancelOrder();                  
         order.deliverOrder();
         System.out.println("Status: " + order.getStatus());
 
@@ -150,8 +150,8 @@ public class OrderManagement {
 
         System.out.println();
         System.out.println("Discount validation:");
-        order.setDiscountPercentage(60);      // rejected
-        order.setDiscountPercentage(-5);      // rejected
+        order.setDiscountPercentage(60);      
+        order.setDiscountPercentage(-5);    
         order.setDiscountPercentage(20);
         System.out.println("Final amount with 20% discount: " + order.calculateFinalAmount());
 
@@ -159,11 +159,10 @@ public class OrderManagement {
         System.out.println("Cancelled order:");
         Order second = new Order("O-1002", "Karim", 1200, 0);
         second.cancelOrder();
-        second.shipOrder();                   // rejected
-        second.cancelOrder();                 // rejected
+        second.shipOrder();                  
+        second.cancelOrder();                
         System.out.println("Status: " + second.getStatus());
 
-        // order.status = ...;        // compile error: private
-        // order.setStatus("DELIVERED");   // compile error: no such method
+        
     }
 }

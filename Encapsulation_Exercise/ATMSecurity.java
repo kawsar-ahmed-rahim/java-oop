@@ -69,7 +69,7 @@ class ATMAccount {
             return false;
         }
         if (pin.equals(enteredPin)) {
-            failedAttempts = 0;          // a success resets the consecutive failures
+            failedAttempts = 0;         
             return true;
         }
         failedAttempts++;

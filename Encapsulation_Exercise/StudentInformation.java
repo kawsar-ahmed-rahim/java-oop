@@ -87,7 +87,6 @@ class Student {
         }
     }
 
-    // Uses the getter methods
     public void displayInfo() {
         System.out.println("Name: " + getName() + " | Age: " + getAge()
                 + " | CGPA: " + getCgpa());
@@ -115,7 +114,7 @@ public class StudentInformation {
         System.out.println("Trying valid updates:");
         student.setAge(23);
         student.setCgpa(3.80);
-        student.setName("Rahim Uddin");
+        student.setName("Rahim ");
         student.displayInfo();
 
         System.out.println();
