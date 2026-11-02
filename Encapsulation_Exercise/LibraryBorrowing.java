@@ -16,16 +16,15 @@
  * =================================================
  */
 
-
 class LibraryBook {
     private final int bookId;
     private String title;
     private String author;
     private final int totalCopies;
-    private int availableCopies;     
+    private int availableCopies;
 
     public LibraryBook(int bookId, String title, String author,
-                       int totalCopies, int availableCopies) {
+            int totalCopies, int availableCopies) {
         if (title == null || title.trim().isEmpty()) {
             throw new IllegalArgumentException("Title must not be empty");
         }
@@ -114,11 +113,11 @@ public class LibraryBorrowing {
         System.out.println();
         book.borrowBook();
         book.borrowBook();
-        book.borrowBook();    
+        book.borrowBook();
         System.out.println();
         book.returnBook();
         book.returnBook();
-        book.returnBook();     
+        book.returnBook();
 
         System.out.println();
         book.setTitle("");

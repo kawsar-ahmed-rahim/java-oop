@@ -20,11 +20,11 @@
 class MobilePhone {
     private String brand;
     private String model;
-    private int batteryPercentage; 
+    private int batteryPercentage;
     private boolean isPoweredOn;
 
     public MobilePhone(String brand, String model, int batteryPercentage,
-                       boolean isPoweredOn) {
+            boolean isPoweredOn) {
         if (batteryPercentage < 0 || batteryPercentage > 100) {
             throw new IllegalArgumentException("Battery must be between 0 and 100");
         }
@@ -52,7 +52,6 @@ class MobilePhone {
     public boolean isPoweredOn() {
         return isPoweredOn;
     }
-
 
     public void chargeBattery(int amount) {
         if (amount <= 0) {
@@ -106,14 +105,14 @@ public class MobilePhoneBattery {
 
         System.out.println();
         phone.powerOn();
-        phone.useBattery(20);      
-        phone.powerOn();         
+        phone.useBattery(20);
+        phone.powerOn();
 
         System.out.println();
         phone.chargeBattery(50);
         phone.powerOn();
-        phone.chargeBattery(80);   
-        phone.chargeBattery(-5);   
+        phone.chargeBattery(80);
+        phone.chargeBattery(-5);
 
         System.out.println();
         phone.powerOff();
