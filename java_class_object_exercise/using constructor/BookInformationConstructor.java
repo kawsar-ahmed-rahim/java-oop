@@ -1,7 +1,7 @@
 // 4.Create a Book class with fields: title, author, price.
-// •
+
 // In the main method, create three Book objects and assign values directly.
-// •
+
 // Display all book details using a method showBook().
 
 // use constructor

@@ -22,38 +22,37 @@
  */
 
 class Order {
-    
-    private enum Status { PLACED, SHIPPED, DELIVERED, CANCELLED }
 
-    private final String orderId;      
+    private int orderId;
     private String customerName;
-    private final double totalAmount;
-    private Status status;             
+    private double totalAmount;
+    private String status;
     private double discountPercentage;
 
+    Order(int orderId, String customerName, double totalAmount,
+            String status, double discountPercentage) {
 
-    public Order(String orderId, String customerName, double totalAmount,
-                 double discountPercentage) {
-        if (orderId == null || orderId.trim().isEmpty()) {
-            throw new IllegalArgumentException("Order ID must not be empty");
-        }
-        if (customerName == null || customerName.trim().isEmpty()) {
-            throw new IllegalArgumentException("Customer name must not be empty");
-        }
-        if (totalAmount <= 0) {
-            throw new IllegalArgumentException("Total amount must be greater than zero");
-        }
-        if (!(discountPercentage >= 0 && discountPercentage <= 50)) {
-            throw new IllegalArgumentException("Discount must be between 0% and 50%");
-        }
         this.orderId = orderId;
-        this.customerName = customerName.trim();
-        this.totalAmount = totalAmount;
-        this.discountPercentage = discountPercentage;
-        this.status = Status.PLACED;
+        this.customerName = customerName;
+        this.totalAmount = Math.max(0, totalAmount);
+
+        if (status != null &&
+                (status.equals("PLACED") || status.equals("SHIPPED") ||
+                        status.equals("DELIVERED") || status.equals("CANCELLED"))) {
+            this.status = status;
+        } else {
+            this.status = "PLACED";
+        }
+
+        if (discountPercentage >= 0 && discountPercentage <= 50) {
+            this.discountPercentage = discountPercentage;
+        } else {
+            this.discountPercentage = 0;
+            System.out.println("Error: Invalid discount percentage!");
+        }
     }
 
-    public String getOrderId() {
+    public int getOrderId() {
         return orderId;
     }
 
@@ -66,7 +65,7 @@ class Order {
     }
 
     public String getStatus() {
-        return status.name();
+        return status;
     }
 
     public double getDiscountPercentage() {
@@ -74,10 +73,10 @@ class Order {
     }
 
     public void setCustomerName(String customerName) {
-        if (customerName == null || customerName.trim().isEmpty()) {
-            System.out.println("Error: customer name cannot be empty.");
+        if (customerName != null && !customerName.trim().isEmpty()) {
+            this.customerName = customerName;
         } else {
-            this.customerName = customerName.trim();
+            System.out.println("Error: Invalid customer name!");
         }
     }
 
@@ -85,84 +84,81 @@ class Order {
         if (discountPercentage >= 0 && discountPercentage <= 50) {
             this.discountPercentage = discountPercentage;
         } else {
-            System.out.println("Error: discount must be between 0% and 50%. Previous value kept.");
+            System.out.println("Error: Discount must be between 0 and 50!");
         }
     }
 
-    
     public void shipOrder() {
-        if (status == Status.PLACED) {
-            status = Status.SHIPPED;
-            System.out.println("Order " + orderId + " shipped.");
+        if (status.equals("PLACED")) {
+            status = "SHIPPED";
+            System.out.println("Order shipped successfully!");
         } else {
-            System.out.println("Cannot ship order " + orderId + ": it is " + status + ".");
+            System.out.println("Error: Order cannot be shipped!");
         }
     }
 
     public void deliverOrder() {
-        if (status == Status.SHIPPED) {
-            status = Status.DELIVERED;
-            System.out.println("Order " + orderId + " delivered.");
+        if (status.equals("SHIPPED")) {
+            status = "DELIVERED";
+            System.out.println("Order delivered successfully!");
         } else {
-            System.out.println("Cannot deliver order " + orderId + ": it is " + status + ".");
+            System.out.println("Error: Order must be shipped first!");
         }
     }
 
     public void cancelOrder() {
-        if (status == Status.PLACED) {
-            status = Status.CANCELLED;
-            System.out.println("Order " + orderId + " cancelled.");
+        if (status.equals("PLACED")) {
+            status = "CANCELLED";
+            System.out.println("Order cancelled successfully!");
         } else {
-            System.out.println("Cannot cancel order " + orderId + ": it is " + status + ".");
+            System.out.println("Error: This order cannot be cancelled!");
         }
     }
 
     public double calculateFinalAmount() {
-        return totalAmount - (totalAmount * discountPercentage / 100);
+        double discount = totalAmount * discountPercentage / 100;
+        return totalAmount - discount;
     }
-}
 
-public class OrderManagement {
+    public void displayInfo() {
+        System.out.println("Order ID: " + getOrderId());
+        System.out.println("Customer Name: " + getCustomerName());
+        System.out.println("Total Amount: " + getTotalAmount());
+        System.out.println("Discount: " + getDiscountPercentage() + "%");
+        System.out.println("Final Amount: " + calculateFinalAmount());
+        System.out.println("Status: " + getStatus());
+    }
+
     public static void main(String[] args) {
-        Order order = new Order("O-1001", "Rahim", 5000, 10);
-        System.out.println(order.getOrderId() + " | " + order.getCustomerName()
-                + " | total " + order.getTotalAmount() + " | discount "
-                + order.getDiscountPercentage() + "% | status " + order.getStatus());
-        System.out.println("Final amount: " + order.calculateFinalAmount());
 
-        System.out.println();
-        System.out.println("Challenge - PLACED cannot jump to DELIVERED:");
-        order.deliverOrder();              
-        System.out.println("Status: " + order.getStatus());
+        Order order = new Order(101, "Rahim", 10000, "PLACED", 10);
 
-        System.out.println();
-        System.out.println("Normal flow:");
+        System.out.println("Initial Order Information:");
+        order.displayInfo();
+
+        System.out.println("\nAfter Updating Information:");
+
+        order.setCustomerName("Karim");
+        order.setDiscountPercentage(20);
+        order.displayInfo();
+
+        System.out.println("\nAfter Shipping Order:");
+
         order.shipOrder();
-        order.cancelOrder();                  
-        order.deliverOrder();
-        System.out.println("Status: " + order.getStatus());
+        order.displayInfo();
 
-        System.out.println();
-        System.out.println("A delivered order cannot change any more:");
+        System.out.println("\nTrying to Cancel Shipped Order:");
+
+        order.cancelOrder();
+
+        System.out.println("\nAfter Delivering Order:");
+
+        order.deliverOrder();
+        order.displayInfo();
+
+        System.out.println("\nTrying to Change Delivered Order:");
+
         order.shipOrder();
         order.cancelOrder();
-        order.deliverOrder();
-
-        System.out.println();
-        System.out.println("Discount validation:");
-        order.setDiscountPercentage(60);      
-        order.setDiscountPercentage(-5);    
-        order.setDiscountPercentage(20);
-        System.out.println("Final amount with 20% discount: " + order.calculateFinalAmount());
-
-        System.out.println();
-        System.out.println("Cancelled order:");
-        Order second = new Order("O-1002", "Karim", 1200, 0);
-        second.cancelOrder();
-        second.shipOrder();                  
-        second.cancelOrder();                
-        System.out.println("Status: " + second.getStatus());
-
-        
     }
 }
