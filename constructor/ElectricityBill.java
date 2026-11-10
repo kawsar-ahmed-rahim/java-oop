@@ -35,7 +35,7 @@ class ElectricityBill {
         return bill;
     }
 
-    // Display bill
+    
     void displayBill() {
         System.out.println("Customer Name: " + customerName);
         System.out.println("Units: " + units);
